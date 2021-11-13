@@ -1,5 +1,5 @@
+import { LoremIpsum } from "lorem-ipsum";
 window.onload = function () {
-    import { LoremIpsum } from "lorem-ipsum";
     const lorem = new LoremIpsum({
         sentencesPerParagraph: {
           max: 9,
@@ -9,7 +9,7 @@ window.onload = function () {
           max: 16,
           min: 4
         }
-      });
+    });
     var gnb = document.getElementById("genbtn");
     gnb.onclick = function () {
         var paragraphs = document.getElementById("prg-am").value;
