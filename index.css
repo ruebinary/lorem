@@ -1,0 +1,103 @@
+:root {
+    --background-color: #111;
+    --foreground-color: #ddd;
+    --link-color: #7289ad;
+    --link-hover: #7289da;
+    --attention-color: #f1eb5e;
+    --spacing: 64px;
+    font-size: 18px;
+    font-family: var(--font1);
+    font-weight: 400;
+    line-height: 1.55;
+    letter-spacing: 0.01em;
+}
+
+::selection {
+    background: #ffff00;
+    color: #333;
+}
+
+.preload * {
+    transition: none;
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+}
+body {
+    background-color: var(--background-color);
+    color: var(--foreground-color);
+    padding: var(--spacing);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 200px;
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: 400;
+    font-family: "InterDisplay", sans-serif;
+    cursor: default;
+}
+p {
+    margin: 2rem 0 0 0;
+}
+#title {
+    color: var(--attention-color);
+    font-family: "jbmono", monospace;
+    text-align: center;
+    font-size: 1.75rem;
+    margin: 2rem 0 0 0;
+}
+.output {
+    margin: 2rem 0 0 0;
+}
+.input {
+    margin: 2rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+input {
+    background-color: #111;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    font-family: "jbmono", monospace;
+    color: #ddd;
+    width: 6vw;
+    text-align: center;
+}
+input:active {
+    border: 1px solid #ddd;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+.btn {
+    font-family: "jbmono", monospace;
+    color: var(--attention-color);
+    transition: color .5s;
+    padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+}
+.btn:hover {
+    background: linear-gradient(to right, #ff0000, #ff00ff, #0000ff, #00ffff, #00ff00, #ffff00, #ff0000);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow 3s linear infinite;
+    background-size: 200% 100%;
+    cursor: pointer;
+}
+@keyframes rainbow {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
