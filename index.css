@@ -96,7 +96,7 @@ input[type="number"] {
     width: 10vw;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center ;
 }
 .btn:hover {
     background: linear-gradient(to right, #ff0000, #ff00ff, #0000ff, #00ffff, #00ff00, #ffff00, #ff0000);
