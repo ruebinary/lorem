@@ -1,5 +1,5 @@
 :root {
-    --background-color: #111;
+    --background-color: #000;
     --foreground-color: #ddd;
     --link-color: #7289ad;
     --link-hover: #7289da;
@@ -48,24 +48,31 @@ p {
     font-size: 1.75rem;
     margin: 2rem 0 0 0;
 }
-.output {
+#loremspace {
     margin: 2rem 0 0 0;
 }
+#loremspace > p {
+    margin: 0 0 1rem 0;
+    padding: 0;
+}
 .input {
-    margin: 2rem 0 0 0;
+    margin: 0 0 0 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
 input {
-    background-color: #111;
-    border: 1px solid #ddd;
+    background-color: var(--background-color);
+    border: 1px solid var(--foreground-color);
     padding: 1rem;
     font-family: "jbmono", monospace;
+    font-size: 2rem;
     color: #ddd;
-    width: 6vw;
+    width: 10vw;
+    height: 10vh;
     text-align: center;
+    margin: 2rem;
 }
 input:active {
     border: 1px solid #ddd;
@@ -81,7 +88,9 @@ input[type="number"] {
     font-family: "jbmono", monospace;
     color: var(--attention-color);
     transition: color .5s;
-    padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+    padding: 1.2rem 1.5rem 1.2rem 1.5rem;
+    border: 1px solid var(--foreground-color);
+    margin: 0 0 0 0;
 }
 .btn:hover {
     background: linear-gradient(to right, #ff0000, #ff00ff, #0000ff, #00ffff, #00ff00, #ffff00, #ff0000);
@@ -91,6 +100,7 @@ input[type="number"] {
     animation: rainbow 3s linear infinite;
     background-size: 200% 100%;
     cursor: pointer;
+    border: 1px solid linear-gradient(to right, #ff0000, #ff00ff, #0000ff, #00ffff, #00ff00, #ffff00, #ff0000);;
 }
 @keyframes rainbow {
     0% {
