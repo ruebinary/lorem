@@ -50,6 +50,8 @@ p {
 }
 #loremspace {
     margin: 2rem 0 0 0;
+    padding: 2rem;
+    border: 1px solid var(--foreground-color)
 }
 #loremspace > p {
     margin: 0 0 1rem 0;
@@ -88,9 +90,13 @@ input[type="number"] {
     font-family: "jbmono", monospace;
     color: var(--attention-color);
     transition: color .5s;
-    padding: 1.2rem 1.5rem 1.2rem 1.5rem;
     border: 1px solid var(--foreground-color);
     margin: 0 0 0 0;
+    height: 10vh;
+    width: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .btn:hover {
     background: linear-gradient(to right, #ff0000, #ff00ff, #0000ff, #00ffff, #00ff00, #ffff00, #ff0000);
