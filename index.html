@@ -88,8 +88,7 @@
                 case 3:
                     var wordIndex = this.randomInt( 0, this.loremWords.length - amount - 1 );
 
-                    return this.loremWords.slice( wordIndex, wordIndex + amount )
-                        .join( " " )
+                    return this.loremWords.slice( wordIndex, wordIndex + amount ).join( " " ).replace( /[\.\,]/g, '' );
                 default:
                     break;
             }
