@@ -30,7 +30,7 @@
                 "amount exceeds 200, please specify a lower value";
         } else if ( paragraphs > 0 ) {
             var lorem = new Lorem;
-            var newLorem = lorem.loremForHtml( 1 )
+            var newLorem = lorem.loremForHtml( paragraphs )
             var copyLorem = newLorem.replace( "<p>", "" ).replace( "</p>", "" )
             document.getElementById( "loremspace" ).innerHTML = " ";
             document.getElementById( "loremspace" ).innerHTML = newLorem;
