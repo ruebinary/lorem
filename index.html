@@ -31,7 +31,7 @@
         } else if ( paragraphs > 0 ) {
             var lorem = new Lorem;
             var newLorem = lorem.loremForHtml( paragraphs )
-            var copyLorem = newLorem.replace( "<p>", "" ).replace( "</p>", "" )
+            var copyLorem = newLorem.replaceAll( "<p>", "" ).replaceAll( "</p>", "" )
             document.getElementById( "loremspace" ).innerHTML = " ";
             document.getElementById( "loremspace" ).innerHTML = newLorem;
             document.getElementById( "copbtn" ).onclick = function( ) {
