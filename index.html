@@ -1,47 +1,18 @@
-<html lang="en">
+<!doctype html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://rsms.me/inter/">
+<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+<link rel="stylesheet" href="./css/main.css">
+<title>lorem</title>
 
-<head>
-    <meta charset="UTF-8">
+<h1 id="title">lorem</h1>
+<p>this is a quick lorem ipsum generator</p>
+<div class="input">
+    <input type="number" name="Paragraphs" v-model="paragraphs">
+    <p class="button" @click="generation">generate</p>
+    <p class="button" @click="copy">copy lorem</p>
+</div>
+<div id="loremspace" v-cloak v-html="display"></div>
 
-    <link rel="stylesheet" href="https://rsms.me/inter/inter-display.css">
-    <link rel="stylesheet" href="./font/jbmono.css">
-    <link rel="stylesheet" href="index.css">
-    <script src="https://ruebinary.github.io/lorem-js/lorem.js"></script>
-    <title>lorem</title>
-</head>
-
-<body>
-    <h1 id="title">lorem</h1>
-    <p>lorem is a quick and easy lorem ipsum generator for those who got enough of the hassle with other placeholder text generators, input the desired paragraph amount below, then click generate, and enjoy your fresh, out-of-the-oven latin placeholder script!</p>
-    <div class="input">
-        <input type="number" name="Paragraphs" id="prg-am">
-        <p class="btn" id="genbtn">generate</p>
-        <p class="btn" id="copbtn">copy lorem</p>
-    </div>
-    <div id="loremspace">here shall appear your lorem soon</div>
-</body>
-<script>
-    var genbutton = document.getElementById( "genbtn" );
-    genbutton.onclick = function( ) {
-        var paragraphs = document.getElementById( "prg-am" ).value;
-        console.log( `${paragraphs} paragraphs to be generated via LOREM JS` );
-        if ( paragraphs > 200 ) {
-            document.getElementById( "loremspace" ).innerHTML =
-                "amount exceeds 200, please specify a lower value";
-        } else if ( paragraphs > 0 ) {
-            var lorem = new Lorem;
-            var newLorem = lorem.loremForHtml( paragraphs )
-            var copyLorem = newLorem.replaceAll( "<p>", "" ).replaceAll( "</p>", "" )
-            document.getElementById( "loremspace" ).innerHTML = " ";
-            document.getElementById( "loremspace" ).innerHTML = newLorem;
-            document.getElementById( "copbtn" ).onclick = function( ) {
-                navigator.clipboard.writeText( copyLorem );
-            };
-        } else {
-            document.getElementById( "loremspace" ).innerHTML =
-                "please specify a positive number of paragraphs to be generated";
-        }
-    };
-</script>
-
-</html>
+<script type="module" src="./js/display.js"></script>
